@@ -1,0 +1,221 @@
+.pm-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.pm-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  backdrop-filter: blur(14px);
+}
+
+.pm-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.pm-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--pm-text);
+}
+
+.pm-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  background: linear-gradient(135deg, var(--pm-primary) 0%, var(--pm-primary-2) 100%);
+  box-shadow: 0 14px 40px rgba(124, 92, 255, 0.25);
+}
+
+.pm-brand-text {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+.pm-brand-text .accent {
+  background: linear-gradient(135deg, var(--pm-primary) 0%, var(--pm-primary-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pm-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--pm-text);
+  display: grid;
+  place-items: center;
+}
+.pm-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.pm-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pm-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--pm-text);
+  text-decoration: none;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+.pm-nav-item i {
+  font-size: 18px;
+  opacity: 0.9;
+}
+.pm-nav-item:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.07);
+}
+.pm-nav-item.active {
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.22), rgba(34, 211, 238, 0.16));
+  border-color: rgba(124, 92, 255, 0.35);
+}
+
+.pm-sidebar-footer {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+}
+
+.pm-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--pm-text);
+}
+.pm-logout:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.pm-footnote {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.pm-main {
+  min-width: 0;
+}
+
+.pm-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 18px 12px;
+  background: rgba(11, 16, 32, 0.6);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pm-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.pm-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.pm-breadcrumb {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 520px;
+}
+
+.pm-topbar-right {
+  display: flex;
+  gap: 10px;
+}
+
+.pm-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--pm-text);
+  text-decoration: none;
+}
+.pm-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.pm-content {
+  padding: 18px;
+}
+.pm-content-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.pm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9;
+}
+
+@media (max-width: 991px) {
+  .pm-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-sidebar {
+    position: fixed;
+    left: -290px;
+    top: 0;
+    width: 280px;
+    z-index: 10;
+    transition: left 0.18s ease;
+  }
+
+  .pm-sidebar.is-open {
+    left: 0;
+  }
+}
+

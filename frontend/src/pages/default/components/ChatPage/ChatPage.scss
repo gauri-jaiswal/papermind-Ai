@@ -1,0 +1,94 @@
+.pm-chat {
+  padding: 6px 0 18px;
+}
+
+.pm-chat-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.pm-chat-head {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pm-chat-body {
+  height: min(62vh, 640px);
+  overflow: auto;
+  padding: 18px;
+}
+
+.pm-msg-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+.pm-msg-row.is-user {
+  justify-content: flex-end;
+}
+.pm-msg-row.is-bot {
+  justify-content: flex-start;
+}
+
+.pm-msg {
+  max-width: min(720px, 92%);
+  border-radius: 18px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+  white-space: pre-wrap;
+  line-height: 1.55;
+}
+
+.pm-msg-row.is-user .pm-msg {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 92, 255, 0.32),
+    rgba(34, 211, 238, 0.22)
+  );
+  border-color: rgba(124, 92, 255, 0.28);
+}
+
+.pm-msg-q {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.pm-msg-a {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.pm-msg-loading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+}
+
+.pm-chat-input {
+  padding: 14px 18px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pm-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.pm-h3 {
+  margin: 6px 0 0;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.pm-small {
+  font-size: 13px;
+}

@@ -1,0 +1,127 @@
+.auth-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.auth-grid {
+  width: min(1100px, 100%);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 18px;
+}
+
+.auth-marketing {
+  border-radius: var(--pm-radius);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow: var(--pm-shadow);
+  padding: 26px;
+  align-items: center;
+}
+
+.auth-marketing-inner {
+  width: 100%;
+}
+
+.auth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--pm-text);
+  margin-bottom: 16px;
+}
+.auth-badge i {
+  color: var(--pm-primary-2);
+}
+
+.auth-title {
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.6px;
+  margin: 0 0 10px 0;
+}
+
+.auth-subtitle {
+  margin: 0 0 18px 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
+.auth-features {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.auth-feature {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+}
+.auth-feature i {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.auth-feature-title {
+  font-weight: 800;
+}
+.auth-feature-text {
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.auth-form-wrap {
+  display: grid;
+  place-items: center;
+}
+
+.auth-card {
+  width: min(520px, 100%);
+  padding: 22px;
+}
+
+.auth-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-card-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--pm-primary) 0%, var(--pm-primary-2) 100%);
+}
+
+.auth-link {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-weight: 800;
+}
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .auth-grid {
+    grid-template-columns: 1fr;
+  }
+}
